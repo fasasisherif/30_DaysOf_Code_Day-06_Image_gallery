@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>View Image</title>
+<link rel="shortcut icon" href="myownlogo.jpg" type="image/X-icon" >
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2&family=Dancing+Script:wght@500&family=Parisienne&family=Satisfy&display=swap" rel="stylesheet">
+
+<style>
+body{
+				margin:0px;
+				padding:0px;
+				background-color:#000;
+				}
+.backward{
+				width:30px;
+				height:30px;
+				position:absolute;
+				top:50%;
+				border-radius:10px;
+				outline:none;
+				left:2%;
+				border-lef:3px solid grey;
+				}
+.forward{
+				width:30px;
+				height:30px;
+				position:absolute;
+				top:50%;
+				left:90%;
+				border-radius:10px;
+				outline:none;
+				}
+.full_image{
+				margin:50% auto;
+				width:75%;
+				height:auto;
+				background-color:#ababab;
+				border-radius:20px;
+				}
+img{
+				width:100%;
+				margin:auto;
+				border-radius:15px;
+				}
+
+
+
+
+
+
+</style>
+
+</head>
+<body>
+
+<section>
+<div>
+<button class="backward"><i class="fas fa-angle-double-left" style="color:#323232; font-size:17px"></button></i></div>
+<div class="full_image"><img class="full_image1" src="anim010.png" alt="infinity wars image"/></div>
+<div>
+<button class="forward"><i class="fas fa-angle-double-right" style="color:#323232; font-size:17px">
+</button></i></div>
+</section> 
+ 
+
+<script>
+
+var all_images = [ "anim01.png", "anim02.png", "anim03.png", "anim04.png", "anim05.png", "anim06.png", "anim07.png","anim08.png", "anim09.png", "anim010.png" , "anim011.png", "anim012.png"]
+
+/*CODE FOR MOVEBACK BUTTON BEGINS*/
+var a1 = document.getElementsByClassName('backward');
+
+a1[0].addEventListener("click",moveback);
+
+var c1 = 9;
+
+function moveback(){
+var b1 = 			
+document.getElementsByClassName('full_image1');
+c1--;
+if (c1< 0){
+				c1 = 11;
+   }
+
+b1[0].src = all_images[c1];
+}
+/*CODE FOR MOVEBACK BUTTON ENDS*/
+
+
+/*CODE FOR MOVEFRONT BUTTON BEGINS*/
+var d1 = document.getElementsByClassName('forward')
+d1[0].addEventListener("click",movefront);
+
+function movefront(){
+b1 = document.getElementsByClassName('full_image1');
+
+c1++;
+if (c1 > 11){
+				c1 = 0;
+		}
+b1[0].src = all_images[c1];
+
+}
+/*CODE FOR MOVEFRONT BUTTON ENDS*/
+
+
+
+
+</script> 
+    
+</body>
+</html>
